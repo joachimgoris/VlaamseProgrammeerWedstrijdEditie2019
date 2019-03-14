@@ -2,18 +2,21 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Oefening3 {
+public class Opmaak {
     public static int breedte;
     public static int hoogte;
     public static List<Integer> hoogsteCijfers = new ArrayList<>();
     public static List<List<Integer>> l1 = new ArrayList<>();
     public static List<Integer> l2 = new ArrayList<>();
+    public static Scanner sc = new Scanner(System.in);
+    public static int TestGeval;
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+
         int testGevallen = sc.nextInt();
 
         for (int l = 1; l <= testGevallen; l++) {
+            TestGeval = l;
             breedte = sc.nextInt();
             hoogte = sc.nextInt();
 
@@ -24,7 +27,7 @@ public class Oefening3 {
             System.out.print(l+" ");
             hoogsteCijfer();
 
-            //print
+            //printCijfers
             System.out.print(l+" ");
             printCijfers();
 
@@ -62,7 +65,7 @@ public class Oefening3 {
 
     public static void printCijfers(){
         for (int i = 0; i<hoogte; i++){
-            System.out.print(l+" ");
+            System.out.print(TestGeval+" ");
             for (int j = 0; j<l1.get(i).size(); j++){
                 int verschil = hoogsteCijfers.get(j).toString().length() - l1.get(i).get(j).toString().length();
                 for (int k = 0; k<verschil; k++){

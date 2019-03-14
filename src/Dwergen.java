@@ -3,7 +3,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Scanner;
 
-public class Oefening1 {
+public class Dwergen {
     public static void main(String[] args){
         int minDiamant = Integer.MAX_VALUE;
         HashMap<Integer, List<Integer>> diamantWaardes = new HashMap<>();
